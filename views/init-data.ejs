@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Init Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .qr-code {
+            margin-top: 30px;
+        }
+        .secret-code {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .copy-button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Khởi tạo dữ liệu</h1>
+<p>Dữ liệu đã được khởi tạo thành công, hãy lưu lại mã hình ảnh QR hoặc mã xác thực để có thể sử dụng.</p>
+
+<div class="qr-code">
+    <img src="<%= qrCodeUrl %>" alt="QR Code">
+</div>
+<div class="secret-code">
+    <p>Email: <span><%= email %></span></p>
+    <p>Mật khẩu: <span><%= password %></span></p>
+</div>
+<div class="secret-code">
+    <p>Mã xác thực: <span id="secretCode"><%= secret %></span></p>
+    <button class="copy-button" onclick="copySecretCode()">Copy Secret Code</button>
+</div>
+
+<script>
+    function copySecretCode() {
+        const secretCode = document.getElementById('secretCode').innerText;
+        navigator.clipboard.writeText(secretCode)
+            .then(() => {
+                alert('Secret code copied to clipboard!');
+            })
+            .catch((error) => {
+                console.error('Failed to copy secret code:', error);
+            });
+    }
+</script>
+</body>
+</html>

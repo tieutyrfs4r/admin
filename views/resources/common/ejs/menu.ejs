@@ -1,0 +1,73 @@
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+        <a href="/dashboard" class="app-brand-link">
+            <span class="app-brand-text demo menu-text fw-bolder ms-2">Exc Crypto</span>
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+                <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+        </a>
+
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+        </a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+        <li class="menu-item <%= originalUrl === 'dashboard' ? 'active' : '' %>">
+            <a href="/dashboard" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div >Bảng điều khiển</div>
+            </a>
+        </li>
+        <li class="menu-item <%= originalUrl === 'cryptocurrencies' ? 'active' : '' %>">
+            <a href="/cryptocurrencies" class="menu-link">
+                <i class='menu-icon  tf-icons bx bxl-bitcoin'></i>
+                <div >Quản lý các tiền số</div>
+            </a>
+        </li>
+        <li class="menu-item <%= originalUrl === 'levels' ? 'active' : '' %>">
+            <a href="/levels" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-star"></i>
+                <div >Quản lý các cấp độ</div>
+            </a>
+        </li>
+        <li class="menu-item <%= originalUrl === 'users' ? 'active' : '' %>">
+            <a href="/users" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div >Quản lý người dùng</div>
+            </a>
+        </li>
+        <li class="menu-item <%= originalUrl === 'networks' ? 'active' : '' %>">
+            <a href="/networks" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-world"></i>
+                <div >Quản lý mạng lưới</div>
+            </a>
+        </li>
+        <li class="menu-item <%= originalUrl === 'wallet-addresses' ? 'active' : '' %>">
+            <a href="/wallet-addresses" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-wallet"></i>
+                <div >Quản lý địa chỉ ví</div>
+            </a>
+        </li>
+        <li class="menu-item <%= originalUrl === 'transaction-histories' ? 'active' : '' %>">
+            <a href="/transaction-histories" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-menu"></i>
+                <div >Quản lý lịch sử giao dịch</div>
+            </a>
+        </li>
+        <li class="menu-item <%= originalUrl === 'profile' ? 'active' : '' %>">
+            <a href="/profile" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user-pin"></i>
+                <div>Hồ sơ cá nhân</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/logout" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-log-out"></i>
+                <div>Đăng xuất</div>
+            </a>
+        </li>
+    </ul>
+</aside>
